@@ -1,6 +1,11 @@
-// Card displaying a single party's info
-export default function PartyCard({ party, match }) {
+export default function PartyCard({ party, match, onDelete }) {
     const isFull = party.maxAttendees != null && party.attendeeCount >= party.maxAttendees;
+
+    function handleDelete() {
+        if (window.confirm("Delete this party? This can't be undone.")) {
+            onDelete?.(party.partyId);
+        }
+    }
 
     return (
         <div className="match-card party-card">
@@ -14,6 +19,11 @@ export default function PartyCard({ party, match }) {
         </span>
             </div>
             <p className="match-venue">{party.location?.address}</p>
+            {onDelete && (
+                <button className="party-delete-btn" onClick={handleDelete}>
+                    Delete party
+                </button>
+            )}
         </div>
     );
 }

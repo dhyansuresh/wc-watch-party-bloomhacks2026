@@ -1,4 +1,3 @@
-// Parties the current user created or joined
 import { useState } from "react";
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
@@ -10,7 +9,7 @@ import "../styles/party.css";
 
 export default function MyParties() {
     const { user } = useAuth();
-    const { parties, loading } = useMyParties(user?.uid);
+    const { parties, loading, removeParty } = useMyParties(user?.uid);
     const { createParty, submitting } = useCreateParty();
     const [isCreating, setIsCreating] = useState(false);
 
@@ -43,7 +42,7 @@ export default function MyParties() {
                     {loading ? (
                         <p className="match-empty">Loading your parties…</p>
                     ) : (
-                        <PartyList parties={parties} />
+                        <PartyList parties={parties} onDelete={removeParty} />
                     )}
                 </section>
             </main>

@@ -1,8 +1,8 @@
-// Live Firestore listener (onSnapshot) for nearby parties
 import { useEffect, useState, useCallback } from "react";
 import {
     subscribeToPartiesByHost,
     createParty as createPartyDoc,
+    deleteParty as deletePartyDoc,
 } from "../firebase/parties";
 
 /**
@@ -32,7 +32,13 @@ export function useMyParties(uid) {
         return unsubscribe;
     }, [uid]);
 
-    return { parties, loading };
+    const removeParty = useCallback(async (partyId) => {
+        await deletePartyDoc(partyId);
+        // The onSnapshot listener above picks up the removal automatically --
+        // no need to update `parties` state by hand here.
+    }, []);
+
+    return { parties, loading, removeParty };
 }
 
 /**

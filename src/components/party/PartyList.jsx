@@ -1,8 +1,7 @@
-// List of parties (e.g. for a given match)
 import PartyCard from "./PartyCard";
 import { mockMatches } from "../../mockData";
 
-export default function PartyList({ parties }) {
+export default function PartyList({ parties, onDelete }) {
     if (!parties || parties.length === 0) {
         return (
             <div className="match-card">
@@ -18,6 +17,7 @@ export default function PartyList({ parties }) {
                     key={party.partyId}
                     party={party}
                     match={mockMatches.find((m) => m.matchId === party.matchId)}
+                    onDelete={onDelete}
                 />
             ))}
         </div>
