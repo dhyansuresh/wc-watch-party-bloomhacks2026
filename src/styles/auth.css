@@ -1,0 +1,54 @@
+/* ============================================================
+   AUTH -- sign-in button and signed-in user chip
+   Reuses tokens from styles.css (--accent, --surface, etc.)
+   ============================================================ */
+
+.auth-slot {
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.auth-signin-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    border: none;
+    border-radius: 999px;
+    padding: 8px 18px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.auth-user {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 6px 14px 6px 6px;
+    color: var(--text);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.82rem;
+    cursor: pointer;
+}
+
+.auth-avatar {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 640px) {
+    .auth-slot {
+        margin: 10px 0 0;
+    }
+}

@@ -49,7 +49,7 @@ export default function Header() {
                         </button>
                     ) : (
                         <button className="auth-signin-btn" onClick={handleSignIn}>
-                            Sign in with Google
+                            Sign inq
                         </button>
                     )}
                 </div>

@@ -5,7 +5,6 @@ import { signInWithGoogle, signOutUser } from "../firebase/auth";
 
 export const AuthContext = createContext(undefined);
 
-
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);

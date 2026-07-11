@@ -1,7 +1,7 @@
 // Root component — sets up routing between pages
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AuthProvider } from "./context/AuthContext";
-import ProtectedRoute from "./components/common/ProtectedRoute";
+import { AuthProvider } from "./context/AuthContext.jsx";
+import ProtectedRoute from "./components/common/protectedRoute.jsx";
 import Home from "./pages/Home";
 import MatchDetail from "./pages/MatchDetail";
 import MyParties from "./pages/MyParties";

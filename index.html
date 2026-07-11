@@ -1,91 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matchday — Home</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matchday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
 <div id="root"></div>
 <script type="module" src="/src/main.jsx"></script>
-  <div class="floodlight-glow" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a href="index.html" class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      MATCHDAY
-    </a>
-    <nav class="main-nav" aria-label="Primary">
-      <a href="index.html" class="nav-link is-active">Home</a>
-      <a href="find-party.html" class="nav-link">Find a Party</a>
-      <a href="#" class="nav-link nav-link--disabled" title="Coming soon">My Parties</a>
-      <a href="#" class="nav-link nav-link--disabled" title="Coming soon">Profile</a>
-    </nav>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <main>
-
-    <section class="matches-section" aria-labelledby="matches-heading">
-      <div class="section-head">
-        <p class="eyebrow">Matchday board</p>
-        <h1 id="matches-heading">What's on the pitch</h1>
-      </div>
-
-      <div class="board-tabs" role="tablist" aria-label="Match filter">
-        <button class="board-tab is-active" role="tab" aria-selected="true" data-filter="live">
-          <span class="live-dot" aria-hidden="true"></span> Live now
-        </button>
-        <button class="board-tab" role="tab" aria-selected="false" data-filter="next">Up next</button>
-      </div>
-
-      <!--
-        MATCH DISPLAY — API HOOK
-        ------------------------
-        This is the box that gets populated by the live scores API.
-        Container: #match-display
-        Populate one .match-card per match inside #match-display.
-        See script.js for the exact markup/fields each card expects
-        (competition, status, clock, team names, crest image URLs, score, venue).
-        A skeleton loading state and one mock card are wired up in script.js
-        so you can see the intended look before the API is connected —
-        swap out loadMatches() in script.js for your real fetch call.
-      -->
-      <div id="match-display" class="match-display" aria-live="polite">
-        <div class="match-card match-card--skeleton" aria-hidden="true">
-          <div class="skeleton-line skeleton-line--tag"></div>
-          <div class="skeleton-row">
-            <div class="skeleton-crest"></div>
-            <div class="skeleton-score"></div>
-            <div class="skeleton-crest"></div>
-          </div>
-          <div class="skeleton-line skeleton-line--venue"></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-section" aria-labelledby="cta-heading">
-      <h2 id="cta-heading" class="cta-eyebrow">Nobody watches alone</h2>
-      <a href="find-party.html" class="cta-button">
-        <span class="cta-bolt" aria-hidden="true">⚡</span>
-        Find new party
-      </a>
-      <p class="cta-sub">Browse watch parties near you, kicking off soon.</p>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <p>Matchday · built for fans who hate watching alone</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
