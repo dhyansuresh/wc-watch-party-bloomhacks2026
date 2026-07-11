@@ -1,0 +1,78 @@
+/* ============================================================
+   KNOCKOUT BRACKET
+   Reuses tokens from styles.css (--accent, --surface, etc.)
+   ============================================================ */
+
+.bracket {
+    display: flex;
+    gap: 48px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+}
+
+.bracket-round {
+    display: flex;
+    flex-direction: column;
+    min-width: 220px;
+    flex-shrink: 0;
+}
+
+.bracket-round-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 16px;
+    text-align: center;
+}
+
+.bracket-round-matches {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 1;
+    gap: 24px;
+    min-height: 320px;
+}
+
+.bracket-match {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+.bracket-round:not(:last-child) .bracket-match::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -24px;
+    width: 24px;
+    height: 1px;
+    background: var(--line);
+}
+
+.bracket-team {
+    display: flex;
+    align-items: center;
+    padding: 6px 2px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.bracket-team + .bracket-team {
+    border-top: 1px solid var(--line);
+}
+
+@media (max-width: 640px) {
+    .bracket {
+        gap: 32px;
+    }
+    .bracket-round {
+        min-width: 180px;
+    }
+}
