@@ -1,0 +1,81 @@
+
+export const mockMatches = [
+    {
+        matchId: "m_2026_qf1",
+        date: "2026-07-11",
+        kickoffTime: "2026-07-11T18:00:00Z",
+        homeTeam: "Argentina",
+        awayTeam: "France",
+        stage: "Quarter-final",
+        venue: "MetLife Stadium",
+    },
+    {
+        matchId: "m_2026_qf2",
+        date: "2026-07-11",
+        kickoffTime: "2026-07-11T21:00:00Z",
+        homeTeam: "Brazil",
+        awayTeam: "Portugal",
+        stage: "Quarter-final",
+        venue: "AT&T Stadium",
+    },
+    {
+        matchId: "m_2026_sf1",
+        date: "2026-07-14",
+        kickoffTime: "2026-07-14T20:00:00Z",
+        homeTeam: "TBD",
+        awayTeam: "TBD",
+        stage: "Semi-final",
+        venue: "Estadio Azteca",
+    },
+];
+
+export const mockParties = [
+    {
+        partyId: "p1",
+        matchId: "m_2026_qf1",
+        hostId: "uid_demo1",
+        hostName: "Dhyan",
+        venueName: "Buffalo Wild Wings - UCF",
+        location: {
+            lat: 28.6024,
+            lng: -81.2001,
+            address: "12345 University Blvd, Orlando, FL",
+        },
+        description: "BYOB, watching on the big screen",
+        attendeeCount: 4,
+        maxAttendees: 20,
+        createdAt: "2026-07-10T14:22:00Z",
+    },
+    {
+        partyId: "p2",
+        matchId: "m_2026_qf1",
+        hostId: "uid_demo2",
+        hostName: "Jake",
+        venueName: "Jake's Apartment",
+        location: {
+            lat: 28.5951,
+            lng: -81.1965,
+            address: "456 College Ave, Orlando, FL",
+        },
+        description: "Small group, bring snacks",
+        attendeeCount: 8,
+        maxAttendees: 10,
+        createdAt: "2026-07-10T16:05:00Z",
+    },
+    {
+        partyId: "p3",
+        matchId: "m_2026_qf2",
+        hostId: "uid_demo3",
+        hostName: "Maria",
+        venueName: "The Social Sports Bar",
+        location: {
+            lat: 28.5383,
+            lng: -81.3792,
+            address: "789 Orange Ave, Orlando, FL",
+        },
+        description: "Public viewing party, all welcome",
+        attendeeCount: 25,
+        maxAttendees: null,
+        createdAt: "2026-07-10T09:40:00Z",
+    },
+];
