@@ -23,9 +23,6 @@ export default function SportBusyWidget() {
 
   return (
     <div className="page-wrapper">
-      <Header />
-      
-      <main style={{ padding: "20px", display: "flex", justifyContent: "center" }}>
         <iframe
           ref={iframeRef}
           id="sportbusy-embed"
@@ -35,9 +32,6 @@ export default function SportBusyWidget() {
           loading="lazy"
           title="SportBusy World Cup 2026 Widget"
         />
-      </main>
-
-      <Footer />
     </div>
   );
 }

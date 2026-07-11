@@ -5,6 +5,7 @@ import MatchList from "../components/match/MatchList";
 import KnockoutBracket from "../components/match/KnockoutBracket";
 import { mockMatches } from "../mockData";
 import "../styles/bracket.css";
+import SportBusyWidget from "/src/pages/Knockout.jsx";
 
 export default function Home() {
     const [view, setView] = useState("matches"); // "matches" | "knockout"
@@ -43,7 +44,9 @@ export default function Home() {
                     {view === "matches" ? (
                         <MatchList matches={mockMatches} />
                     ) : (
-                        <KnockoutBracket matches={mockMatches} />
+                        <div className="widget-container">
+                            <SportBusyWidget />
+                        </div>
                     )}
                 </section>
             </main>
