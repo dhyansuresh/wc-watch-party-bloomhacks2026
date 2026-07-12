@@ -4,8 +4,8 @@ import ProtectedRoute from "./components/common/protectedRoute.jsx";
 import Home from "./pages/Home";
 import MatchDetail from "./pages/MatchDetail";
 import MyParties from "./pages/MyParties";
-import Knockout from "./pages/Knockout.jsx";
-import SportBusyWidget from "./pages/Knockout.jsx"; 
+import Knockout from "./pages/Widget.jsx";
+import SportBusyWidget from "./pages/Widget.jsx"; 
 
 function App() {
     return (

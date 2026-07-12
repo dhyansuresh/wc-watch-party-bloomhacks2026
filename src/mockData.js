@@ -1,32 +1,82 @@
 
-export const mockMatches = [
+export const mockMatches = 
+    [
     {
-        matchId: "m_2026_qf1",
-        date: "2026-07-11",
-        kickoffTime: "2026-07-11T18:00:00Z",
-        homeTeam: "Argentina",
-        awayTeam: "France",
-        stage: "Quarter-final",
-        venue: "MetLife Stadium",
+        "matchId": "m_2026_qf1",
+        "date": "2026-07-09",
+        "kickoffTime": "2026-07-09T20:00:00Z",
+        "homeTeam": "France",
+        "awayTeam": "Morocco",
+        "stage": "Quarter-final",
+        "venue": "Gillette Stadium (Boston Stadium)",
+        "result": "France 2 - 0 Morocco"
     },
     {
-        matchId: "m_2026_qf2",
-        date: "2026-07-11",
-        kickoffTime: "2026-07-11T21:00:00Z",
-        homeTeam: "Brazil",
-        awayTeam: "Portugal",
-        stage: "Quarter-final",
-        venue: "AT&T Stadium",
+        "matchId": "m_2026_qf2",
+        "date": "2026-07-10",
+        "kickoffTime": "2026-07-10T19:00:00Z",
+        "homeTeam": "Spain",
+        "awayTeam": "Belgium ",
+        "stage": "Quarter-final",
+        "venue": "SoFi Stadium (Los Angeles Stadium)",
+        "result": "Spain 2 - 1 Belgium"
     },
     {
-        matchId: "m_2026_sf1",
-        date: "2026-07-14",
-        kickoffTime: "2026-07-14T20:00:00Z",
-        homeTeam: "TBD",
-        awayTeam: "TBD",
-        stage: "Semi-final",
-        venue: "Estadio Azteca",
+        "matchId": "m_2026_qf3",
+        "date": "2026-07-11",
+        "kickoffTime": "2026-07-11T21:00:00Z",
+        "homeTeam": "Norway",
+        "awayTeam": "England",
+        "stage": "Quarter-final",
+        "venue": "Hard Rock Stadium (Miami Stadium)",
+        "result": "Norway 1 - 2 England (AET)"
     },
+    {
+        "matchId": "m_2026_qf4",
+        "date": "2026-07-11",
+        "kickoffTime": "2026-07-11T21:00:00Z",
+        "homeTeam": "Argentina",
+        "awayTeam": "Switzerland",
+        "stage": "Quarter-final",
+        "venue": "Arrowhead Stadium (Kansas City Stadium)",
+        "result": "TBD"
+    },
+    {
+        "matchId": "m_2026_sf1",
+        "date": "2026-07-14",
+        "kickoffTime": "2026-07-14T19:00:00Z",
+        "homeTeam": "France",
+        "awayTeam": "Spain",
+        "stage": "Semi-final",
+        "venue": "AT&T Stadium (Dallas Stadium)"
+    },    
+    {
+        "matchId": "m_2026_sf2",
+        "date": "2026-07-15",
+        "kickoffTime": "2026-07-15T19:00:00Z",
+        "homeTeam": "England",
+        "awayTeam": "TBD",
+        "stage": "Semi-final",
+        "venue": "Mercedes-Benz Stadium (Atlanta Stadium)"
+    },
+    {
+        "matchId": "m_2026_3rd",
+        "date": "2026-07-18",
+        "kickoffTime": "2026-07-18T21:00:00Z",
+        "homeTeam": "TBD",
+        "awayTeam": "TBD",
+        "stage": "Third place play-off",
+        "venue": "Hard Rock Stadium (Miami Stadium)"
+    },
+    {
+        "matchId": "m_2026_final",
+        "date": "2026-07-19",
+        "kickoffTime": "2026-07-19T19:00:00Z",
+        "homeTeam": "TBD",
+        "awayTeam": "TBD",
+        "stage": "Final",
+        "venue": "MetLife Stadium (New York New Jersey Stadium)"
+    }
 ];
 
 export const mockParties = [

@@ -1,5 +1,5 @@
 // List of upcoming matches
-import SportBusyWidget from "/src/pages/Knockout.jsx";
+import SportBusyWidget from "/src/pages/Widget.jsx";
 
 <div className="widget-container" style={{ width: "100%", maxWidth: "380px" }}>
     <SportBusyWidget />
