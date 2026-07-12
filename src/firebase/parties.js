@@ -4,6 +4,8 @@
 import {
     collection,
     addDoc,
+    deleteDoc,
+    doc,
     query,
     where,
     onSnapshot,
@@ -23,6 +25,13 @@ export async function createParty(partyData) {
         createdAt: serverTimestamp(),
     });
     return docRef.id;
+}
+
+/**
+ * Permanently deletes a party document by id.
+ */
+export async function deleteParty(partyId) {
+    await deleteDoc(doc(db, PARTIES_COLLECTION, partyId));
 }
 
 /**

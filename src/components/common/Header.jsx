@@ -5,6 +5,7 @@ import "../../styles/auth.css";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
     const { user, isSignedIn, signIn, signOut, loading } = useAuth();
 
     async function handleSignIn() {
@@ -13,6 +14,11 @@ export default function Header() {
         } catch (err) {
             console.error("Sign-in failed:", err);
         }
+    }
+
+    function handleSignOut() {
+        setMenuOpen(false);
+        signOut();
     }
 
     return (
@@ -41,15 +47,39 @@ export default function Header() {
 
                 <div className="auth-slot">
                     {loading ? null : isSignedIn ? (
-                        <button className="auth-user" onClick={signOut} title="Sign out">
-                            {user.photoURL && (
-                                <img src={user.photoURL} alt="" className="auth-avatar" referrerPolicy="no-referrer" />
+                        <div
+                            className="auth-user-menu"
+                            onMouseEnter={() => setMenuOpen(true)}
+                            onMouseLeave={() => setMenuOpen(false)}
+                        >
+                            <button
+                                className="auth-user"
+                                onClick={() => setMenuOpen((open) => !open)}
+                                aria-haspopup="true"
+                                aria-expanded={menuOpen}
+                            >
+                                {user.photoURL && (
+                                    <img
+                                        src={user.photoURL}
+                                        alt=""
+                                        className="auth-avatar"
+                                        referrerPolicy="no-referrer"
+                                    />
+                                )}
+                                <span className="auth-name">{user.displayName?.split(" ")[0] ?? "Signed in"}</span>
+                            </button>
+
+                            {menuOpen && (
+                                <div className="auth-dropdown" role="menu">
+                                    <button className="auth-dropdown-item" role="menuitem" onClick={handleSignOut}>
+                                        Sign out
+                                    </button>
+                                </div>
                             )}
-                            <span className="auth-name">{user.displayName?.split(" ")[0] ?? "Signed in"}</span>
-                        </button>
+                        </div>
                     ) : (
                         <button className="auth-signin-btn" onClick={handleSignIn}>
-                            Sign in
+                            Sign in with Google
                         </button>
                     )}
                 </div>

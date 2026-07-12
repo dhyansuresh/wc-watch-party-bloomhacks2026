@@ -101,6 +101,27 @@
     color: var(--live);
 }
 
+<<<<<<< HEAD
+=======
+.party-delete-btn {
+    margin-top: 14px;
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text-muted);
+    border-radius: 999px;
+    padding: 6px 14px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+
+.party-delete-btn:hover {
+    border-color: var(--live);
+    color: var(--live);
+}
+
+>>>>>>> 4b1a64a3507fcfaf971e977ae38e433242903de9
 .matches-section .cta-button {
     margin-bottom: 24px;
 }
